@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R3 Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="navbars">
+        <div class="desktop_nav">
+            <a class="navigation_logo" href="/">
+                <img src="https://via.placeholder.com/150x50/0066cc/ffffff?text=LOGO" alt="logo" loading="lazy" />
+            </a>
+            <div class="navigation_links">
+                <div class="nav_item">
+                    <a class="nav_link">Tentang Kami</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown_item">Profil Perusahaan</a>
+                        <a href="#" class="dropdown_item">Visi & Misi</a>
+                        <a href="#" class="dropdown_item">Manajemen</a>
+                        <a href="#" class="dropdown_item">Sejarah</a>
+                    </div>
+                </div>
+                
+                <div class="nav_item">
+                    <a class="nav_link">Bisnis Kami</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown_item">Produk & Layanan</a>
+                        <a href="#" class="dropdown_item">Portfolio</a>
+                        <a href="#" class="dropdown_item">Jaringan Distribusi</a>
+                        <a href="#" class="dropdown_item">Mitra Bisnis</a>
+                    </div>
+                </div>
+                
+                <div class="nav_item">
+                    <a class="nav_link">Komitmen & Responsibilitas</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown_item">Keberlanjutan</a>
+                        <a href="#" class="dropdown_item">Tata Kelola Perusahaan</a>
+                        <a href="#" class="dropdown_item">Kepatuhan</a>
+                        <a href="#" class="dropdown_item">Etika Bisnis</a>
+                    </div>
+                </div>
+                
+                <div class="nav_item">
+                    <a class="nav_link">CSR</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown_item">Program CSR</a>
+                        <a href="#" class="dropdown_item">Laporan CSR</a>
+                        <a href="#" class="dropdown_item">Galeri</a>
+                    </div>
+                </div>
+                
+                <div class="nav_item">
+                    <a class="nav_link">Investor</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown_item">Laporan Keuangan</a>
+                        <a href="#" class="dropdown_item">Laporan Tahunan</a>
+                        <a href="#" class="dropdown_item">Informasi Saham</a>
+                        <a href="#" class="dropdown_item">Prospektus</a>
+                    </div>
+                </div>
+                
+                <div class="nav_item">
+                    <a class="nav_link">Berita</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown_item">Berita Terkini</a>
+                        <a href="#" class="dropdown_item">Siaran Pers</a>
+                        <a href="#" class="dropdown_item">Media</a>
+                    </div>
+                </div>
+                
+                <div class="nav_item">
+                    <a class="nav_link">Karir</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown_item">Lowongan Kerja</a>
+                        <a href="#" class="dropdown_item">Budaya Kerja</a>
+                        <a href="#" class="dropdown_item">Program Magang</a>
+                    </div>
+                </div>
+                
+                <div class="nav_item">
+                    <a class="nav_link">Kontak</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown_item">Hubungi Kami</a>
+                        <a href="#" class="dropdown_item">Lokasi Kantor</a>
+                        <a href="#" class="dropdown_item">FAQ</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navigation_actions">
+                <button class="icon_btn" onclick="alert('Search functionality')">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                </button>
+                
+                <div class="lang_switcher" onclick="toggleLanguage()">
+                    <span id="currentLang">ID</span>
+                    <span>|</span>
+                    <span>EN</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mobile_nav">
+            <div class="mobile_header">
+                <a class="navigation_logo" href="/">
+                    <img src="https://via.placeholder.com/120x40/0066cc/ffffff?text=LOGO" alt="logo" loading="lazy" />
+                </a>
+                <button class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <div class="mobile_menu" id="mobileMenu">
+                <div class="mobile_nav_item">
+                    <div class="mobile_nav_link" onclick="toggleMobileDropdown(this)">
+                        Tentang Kami
+                        <span>▼</span>
+                    </div>
+                    <div class="mobile_dropdown">
+                        <a href="#" class="mobile_dropdown_item">Profil Perusahaan</a>
+                        <a href="#" class="mobile_dropdown_item">Visi & Misi</a>
+                        <a href="#" class="mobile_dropdown_item">Manajemen</a>
+                        <a href="#" class="mobile_dropdown_item">Sejarah</a>
+                    </div>
+                </div>
+                
+                <div class="mobile_nav_item">
+                    <div class="mobile_nav_link" onclick="toggleMobileDropdown(this)">
+                        Bisnis Kami
+                        <span>▼</span>
+                    </div>
+                    <div class="mobile_dropdown">
+                        <a href="#" class="mobile_dropdown_item">Produk & Layanan</a>
+                        <a href="#" class="mobile_dropdown_item">Portfolio</a>
+                        <a href="#" class="mobile_dropdown_item">Jaringan Distribusi</a>
+                        <a href="#" class="mobile_dropdown_item">Mitra Bisnis</a>
+                    </div>
+                </div>
+                
+                <div class="mobile_nav_item">
+                    <div class="mobile_nav_link" onclick="toggleMobileDropdown(this)">
+                        Komitmen & Responsibilitas
+                        <span>▼</span>
+                    </div>
+                    <div class="mobile_dropdown">
+                        <a href="#" class="mobile_dropdown_item">Keberlanjutan</a>
+                        <a href="#" class="mobile_dropdown_item">Tata Kelola Perusahaan</a>
+                        <a href="#" class="mobile_dropdown_item">Kepatuhan</a>
+                        <a href="#" class="mobile_dropdown_item">Etika Bisnis</a>
+                    </div>
+                </div>
+                
+                <div class="mobile_nav_item">
+                    <div class="mobile_nav_link" onclick="toggleMobileDropdown(this)">
+                        CSR
+                        <span>▼</span>
+                    </div>
+                    <div class="mobile_dropdown">
+                        <a href="#" class="mobile_dropdown_item">Program CSR</a>
+                        <a href="#" class="mobile_dropdown_item">Laporan CSR</a>
+                        <a href="#" class="mobile_dropdown_item">Galeri</a>
+                    </div>
+                </div>
+                
+                <div class="mobile_nav_item">
+                    <div class="mobile_nav_link" onclick="toggleMobileDropdown(this)">
+                        Investor
+                        <span>▼</span>
+                    </div>
+                    <div class="mobile_dropdown">
+                        <a href="#" class="mobile_dropdown_item">Laporan Keuangan</a>
+                        <a href="#" class="mobile_dropdown_item">Laporan Tahunan</a>
+                        <a href="#" class="mobile_dropdown_item">Informasi Saham</a>
+                        <a href="#" class="mobile_dropdown_item">Prospektus</a>
+                    </div>
+                </div>
+                
+                <div class="mobile_nav_item">
+                    <div class="mobile_nav_link" onclick="toggleMobileDropdown(this)">
+                        Berita
+                        <span>▼</span>
+                    </div>
+                    <div class="mobile_dropdown">
+                        <a href="#" class="mobile_dropdown_item">Berita Terkini</a>
+                        <a href="#" class="mobile_dropdown_item">Siaran Pers</a>
+                        <a href="#" class="mobile_dropdown_item">Media</a>
+                    </div>
+                </div>
+                
+                <div class="mobile_nav_item">
+                    <div class="mobile_nav_link" onclick="toggleMobileDropdown(this)">
+                        Karir
+                        <span>▼</span>
+                    </div>
+                    <div class="mobile_dropdown">
+                        <a href="#" class="mobile_dropdown_item">Lowongan Kerja</a>
+                        <a href="#" class="mobile_dropdown_item">Budaya Kerja</a>
+                        <a href="#" class="mobile_dropdown_item">Program Magang</a>
+                    </div>
+                </div>
+                
+                <div class="mobile_nav_item">
+                    <div class="mobile_nav_link" onclick="toggleMobileDropdown(this)">
+                        Kontak
+                        <span>▼</span>
+                    </div>
+                    <div class="mobile_dropdown">
+                        <a href="#" class="mobile_dropdown_item">Hubungi Kami</a>
+                        <a href="#" class="mobile_dropdown_item">Lokasi Kantor</a>
+                        <a href="#" class="mobile_dropdown_item">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo_content">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a demo page showing the navigation bar in action. Scroll down to see the sticky navigation effect.</p>
+        <p style="margin-top: 2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div style="height: 1500px; margin-top: 2rem; background: linear-gradient(to bottom, #f0f0f0, #ffffff);">
+            <p style="padding: 2rem;">Scroll to test sticky navigation...</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        function toggleMobileDropdown(el) {
+            const dropdown = el.nextElementSibling;
+            const arrow = el.querySelector('span');
+            
+            dropdown.classList.toggle('active');
+            
+            if (dropdown.classList.contains('active')) {
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function toggleLanguage() {
+            const currentLang = document.getElementById('currentLang');
+            if (currentLang.textContent === 'ID') {
+                currentLang.textContent = 'EN';
+                alert('Language switched to English');
+            } else {
+                currentLang.textContent = 'ID';
+                alert('Bahasa diubah ke Indonesia');
+            }
+        }
+    </script>
+</body>
+</html>
