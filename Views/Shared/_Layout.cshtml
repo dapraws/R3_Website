@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R3 Website</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <div class="navbars">
@@ -222,14 +221,7 @@
         </div>
     </div>
 
-    <div class="demo_content">
-        <h1>Welcome to Our Website</h1>
-        <p>This is a demo page showing the navigation bar in action. Scroll down to see the sticky navigation effect.</p>
-        <p style="margin-top: 2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div style="height: 1500px; margin-top: 2rem; background: linear-gradient(to bottom, #f0f0f0, #ffffff);">
-            <p style="padding: 2rem;">Scroll to test sticky navigation...</p>
-        </div>
-    </div>
+    @RenderBody()
 
     <script>
         function toggleMobileMenu() {

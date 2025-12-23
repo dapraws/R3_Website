@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   margin: 0;
@@ -13,19 +16,27 @@ body {
 
 .navbars {
   background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
+  display: block;
   top: 0;
   z-index: 1000;
 }
 
 .desktop_nav {
+  background-color: #0066cc;
+  border-radius: 20px;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1168px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  top: 12px;
 }
 
 .navigation_logo img {
